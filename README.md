@@ -21,7 +21,7 @@ I'm a passionate and curious individual who thrives on the endless possibilities
 My interests are as diverse as my skill set. Here are some areas you'll find me delving into:
 
 - **Web Development**: Crafting interactive and user-friendly web experiences.
-- 
+
 - **IoT**: Connecting the physical world to the digital realm.
 
 - **Machine Learning**: Exploring the endless possibilities of AI and machine learning.
@@ -44,25 +44,11 @@ This repository is a treasure trove of some of my most exciting projects. Each o
 
 Feel free to explore these projects, dive into the code, and provide feedback. Collaboration is key to growth!
 
-<div style="display: flex;">
-   <a href="https://github.com/CEG-bandITs/itrix-game">
-     <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=CEG-bandITs&repo=itrix-game" />
-   </a>
-   <a href="https://github.com/Muthu-Palaniyappan-OL/command_cruiser">
-     <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Muthu-Palaniyappan-OL&repo=command_cruiser" />
-   </a>
-   <a href="https://github.com/Muthu-Palaniyappan-OL/payd">
-     <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Muthu-Palaniyappan-OL&repo=payd" />
-   </a>
-   <a href="https://github.com/Muthu-Palaniyappan-OL/rock_paper_scissor">
-     <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Muthu-Palaniyappan-OL&repo=rock_paper_scissor" />
-   </a>
-   <a href="https://github.com/Muthu-Palaniyappan-OL/tls">
-     <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Muthu-Palaniyappan-OL&repo=tls" />
-   </a>
-   <a href="https://github.com/Muthu-Palaniyappan-OL/crequest">
-     <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Muthu-Palaniyappan-OL&repo=crequest" />
-   </a>
+<div align="center">
+  <div style="display: flex;">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Muthu-Palaniyappan-OL&layout=compact&show_icons=true&title_color=ffffff&icon_color=34abeb&text_color=daf7dc&bg_color=151515" style="vertical-align: top;" />
+    <img src="https://github-readme-stats.vercel.app/api?username=Muthu-Palaniyappan-OL&show_icons=true&title_color=ffffff&icon_color=34abeb&text_color=daf7dc&bg_color=151515" />
+  </div>
 </div>
 
 ## Connect With Me
