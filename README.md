@@ -11,8 +11,18 @@
 
 ## Explore My Projects
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Muthu-Palaniyappan-OL&repo=command_cruiser)]([https://github.com/anuraghazra/github-readme-stats](https://github.com/Muthu-Palaniyappan-OL/command_cruiser)https://github.com/Muthu-Palaniyappan-OL/command_cruiser)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Muthu-Palaniyappan-OL&repo=payd)]([https://github.com/anuraghazra/github-readme-stats](https://github.com/Muthu-Palaniyappan-OL/command_cruiser)https://github.com/Muthu-Palaniyappan-OL/payd)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Muthu-Palaniyappan-OL&repo=rock_paper_scissor)]([https://github.com/anuraghazra/github-readme-stats](https://github.com/Muthu-Palaniyappan-OL/command_cruiser)https://github.com/Muthu-Palaniyappan-OL/rock_paper_scissor)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Muthu-Palaniyappan-OL&repo=crequest)]([https://github.com/anuraghazra/github-readme-stats](https://github.com/Muthu-Palaniyappan-OL/command_cruiser)https://github.com/Muthu-Palaniyappan-OL/crequest)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Muthu-Palaniyappan-OL&repo=tls)]([https://github.com/anuraghazra/github-readme-stats](https://github.com/Muthu-Palaniyappan-OL/command_cruiser)https://github.com/Muthu-Palaniyappan-OL/tls)
+<a href="https://github.com/Muthu-Palaniyappan-OL/command_cruiser">
+   <img src="https://github-readme-stats.vercel.app/api/pin/?username=Muthu-Palaniyappan-OL&repo=command_cruiser" />
+</a>
+<a href="https://github.com/Muthu-Palaniyappan-OL/payd">
+   <img src="https://github-readme-stats.vercel.app/api/pin/?username=Muthu-Palaniyappan-OL&repo=payd" />
+</a>
+<a href="https://github.com/Muthu-Palaniyappan-OL/rock_paper_scissor">
+   <img src="https://github-readme-stats.vercel.app/api/pin/?username=Muthu-Palaniyappan-OL&repo=rock_paper_scissor" />
+</a>
+<a href="https://github.com/Muthu-Palaniyappan-OL/crequest">
+   <img src="https://github-readme-stats.vercel.app/api/pin/?username=Muthu-Palaniyappan-OL&repo=crequest" />
+</a>
+<a href="https://github.com/Muthu-Palaniyappan-OL/tls">
+   <img src="https://github-readme-stats.vercel.app/api/pin/?username=Muthu-Palaniyappan-OL&repo=tls" />
+</a>
