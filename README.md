@@ -9,6 +9,8 @@
 </a>
 </div>
 
+[![trophy](https://github-profile-trophy.vercel.app/?username=Muthu-Palaniyappan-OL&theme=onedark)](https://github.com/Muthu-Palaniyappan-OL/github-profile-trophy)
+
 ## Explore My Projects
 
 <a href="https://github.com/Muthu-Palaniyappan-OL/command_cruiser">
