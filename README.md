@@ -9,7 +9,7 @@
 </a>
 </div>
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=Muthu-Palaniyappan-OL&theme=onedark)](https://github.com/Muthu-Palaniyappan-OL/github-profile-trophy)
+[![trophy](https://github-profile-trophy.vercel.app/?username=Muthu-Palaniyappan-OL&theme=onedark)](https://github.com/Muthu-Palaniyappan-OL)
 
 ## Explore My Projects
 
