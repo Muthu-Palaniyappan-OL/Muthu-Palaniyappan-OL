@@ -20,3 +20,18 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy dist --project-name=muthu-palaniyappan-ol
+      - name: Cleanup old deployments
+        env:
+          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          PROJECT="muthu-palaniyappan-ol"
+          API="https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects/$PROJECT/deployments"
+          # Get all deployment IDs except the latest
+          IDS=$(curl -s "$API" -H "Authorization: Bearer $CF_API_TOKEN" \
+            | jq -r '.result[1:][].id')
+          for ID in $IDS; do
+            curl -s -X DELETE "$API/$ID?force=true" \
+              -H "Authorization: Bearer $CF_API_TOKEN" > /dev/null
+            echo "Deleted deployment $ID"
+          done

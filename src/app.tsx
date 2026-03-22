@@ -8,9 +8,6 @@ export function App() {
         <p className="text-lg text-zinc-500 dark:text-zinc-400">
           Software Engineer (SD2) at <span className="text-zinc-700 dark:text-zinc-200 font-semibold">Appian</span>
         </p>
-        <p className="text-sm text-zinc-400 dark:text-zinc-500">
-          Chennai, India 🇮🇳
-        </p>
       </div>
     </main>
   )
