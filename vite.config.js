@@ -14,14 +14,16 @@ function layoutPlugin() {
     transformIndexHtml: {
       order: "pre",
       handler(html, ctx) {
-        // Skip layout.html itself
         if (ctx.filename === layoutPath) return html;
-        // Extract title from <!--title: ...-->
         const titleMatch = html.match(/<!--title:\s*(.+?)-->/);
-        const title = titleMatch ? titleMatch[1].trim() : "Muthu Palaniyappan";
-        const content = html.replace(/<!--title:\s*.+?-->/, "").trim();
+        const descMatch = html.match(/<!--description:\s*(.+?)-->/);
+        const title = titleMatch ? titleMatch[1].trim() : "Muthu Palaniyappan OL";
+        const description = descMatch ? descMatch[1].trim() : "Software Engineer building scalable solutions. Portfolio of Muthu Palaniyappan OL.";
+        const relPath = ctx.filename.replace(resolve(__dirname, "src"), "").replace("/index.html", "/") || "/";
+        const canonical = `${SITE}${relPath}`;
+        let content = html.replace(/<!--title:\s*.+?-->/, "").replace(/<!--description:\s*.+?-->/, "").trim();
         const layout = readFileSync(layoutPath, "utf-8");
-        return layout.replace("{{title}}", title).replace("{{content}}", content);
+        return layout.replaceAll("{{title}}", title).replaceAll("{{description}}", description).replace("{{canonical}}", canonical).replace("{{content}}", content);
       },
     },
   };
