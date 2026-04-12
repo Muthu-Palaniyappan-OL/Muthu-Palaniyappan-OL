@@ -1,32 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog - Muthu Palaniyappan</title>
-  <link rel="stylesheet" href="/style.css" />
-</head>
-<body class="bg-zinc-950 text-zinc-100 min-h-screen">
-  <nav class="fixed top-0 w-full bg-zinc-950/80 backdrop-blur border-b border-zinc-800 z-10">
-    <div class="max-w-2xl mx-auto px-6 py-4 flex gap-6">
-      <a href="/" class="text-zinc-400 hover:text-emerald-400">Home</a>
-      <a href="/blog/" class="text-zinc-100 font-semibold hover:text-emerald-400">Blog</a>
+<!--title: Blog - Muthu Palaniyappan-->
+
+  <main class="max-w-3xl mx-auto px-6 pt-24 pb-16">
+    <h1 class="text-3xl font-bold text-stone-900 mb-8">Blog</h1>
+
+    <div class="space-y-4">
+      <a href="/blog/http1-vs-http2/" class="block p-5 rounded-xl border border-stone-200 hover:border-emerald-300 hover:shadow-md transition-all">
+        <time class="text-xs text-stone-400">2026-04-12</time>
+        <h2 class="mt-1 text-lg font-semibold text-stone-900">HTTP/1.1 vs HTTP/2 — What Actually Changed?</h2>
+        <p class="mt-1 text-sm text-stone-500">Multiplexing, header compression, server push, and why HTTP/2 makes your sites faster.</p>
+      </a>
     </div>
-  </nav>
-
-  <main class="max-w-2xl mx-auto px-6 pt-24 pb-16">
-    <h1 class="text-3xl font-bold mb-8">Blog</h1>
-
-    <article class="mb-12">
-      <time class="text-sm text-zinc-500">2026-03-22</time>
-      <h2 class="text-xl font-semibold mt-1 mb-3">Building My Personal Site with Tailwind</h2>
-      <div class="text-zinc-400 leading-relaxed space-y-3">
-        <p>I recently rebuilt my personal website using plain HTML and Tailwind CSS v4, deployed on Cloudflare Pages.</p>
-        <p>The stack is minimal — Vite for bundling, Tailwind for styling. No heavy frameworks, no SSR complexity. Just a fast static site that loads in milliseconds.</p>
-        <p>Tailwind v4 with the Vite plugin makes the DX smooth — no config file needed, just <code class="text-emerald-400">@import "tailwindcss"</code> and you're good to go.</p>
-        <p>The whole thing deploys automatically via GitHub Actions to Cloudflare Pages on every push to main. Simple, fast, free.</p>
-      </div>
-    </article>
   </main>
-</body>
-</html>

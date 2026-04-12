@@ -1,0 +1,54 @@
+<!--title: HTTP/1.1 vs HTTP/2 - Muthu Palaniyappan-->
+
+  <main class="max-w-3xl mx-auto px-6 pt-24 pb-16">
+    <a href="/blog/" class="text-sm text-emerald-600 hover:text-emerald-700 transition-colors">← Back to Blog</a>
+    <time class="block mt-4 text-xs text-stone-400">2026-04-12</time>
+    <h1 class="text-2xl font-bold mt-1 mb-6 text-stone-900">HTTP/1.1 vs HTTP/2 — What Actually Changed?</h1>
+
+    <div class="text-stone-600 leading-relaxed space-y-4">
+      <p>HTTP/1.1 has been the backbone of the web since 1997. It works, but it has some fundamental performance bottlenecks that HTTP/2 was designed to solve.</p>
+
+      <h2 class="text-lg font-semibold text-stone-900 pt-2">The Problem with HTTP/1.1</h2>
+      <p>In HTTP/1.1, each request-response pair blocks the connection. If you need 10 resources, the browser either waits for each one sequentially or opens multiple TCP connections (typically 6 per domain). This is called <span class="font-medium text-stone-800">head-of-line blocking</span>.</p>
+      <p>Developers worked around this with hacks like domain sharding, sprite sheets, and inlining CSS — all to reduce the number of requests.</p>
+
+      <h2 class="text-lg font-semibold text-stone-900 pt-2">What HTTP/2 Fixes</h2>
+
+      <p><span class="font-medium text-stone-800">Multiplexing</span> — Multiple requests and responses travel over a single TCP connection simultaneously. No more head-of-line blocking at the HTTP layer. The browser can request all 10 resources at once over one connection.</p>
+
+      <p><span class="font-medium text-stone-800">Header Compression (HPACK)</span> — HTTP/1.1 sends headers as plain text on every request, often repeating the same cookies and user-agent strings. HTTP/2 compresses headers using HPACK, which uses Huffman encoding and a shared header table. This can reduce header overhead by 85-90%.</p>
+
+      <p><span class="font-medium text-stone-800">Binary Framing</span> — HTTP/1.1 is text-based. HTTP/2 uses a binary framing layer that's more efficient to parse and less error-prone. Each message is split into small frames that can be interleaved on the connection.</p>
+
+      <p><span class="font-medium text-stone-800">Stream Prioritization</span> — The client can signal which resources matter most. CSS and JS can be prioritized over images, so the page renders faster.</p>
+
+      <p><span class="font-medium text-stone-800">Server Push</span> — The server can proactively send resources it knows the client will need. If the browser requests <code class="text-emerald-600 bg-emerald-50 px-1 py-0.5 rounded text-sm">index.html</code>, the server can push <code class="text-emerald-600 bg-emerald-50 px-1 py-0.5 rounded text-sm">style.css</code> along with it before the browser even asks. (Though in practice, this feature is rarely used and was removed in HTTP/3.)</p>
+
+      <h2 class="text-lg font-semibold text-stone-900 pt-2">Quick Comparison</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border border-stone-200 rounded-lg overflow-hidden">
+          <thead class="bg-stone-100">
+            <tr>
+              <th class="text-left p-3 font-semibold text-stone-700">Feature</th>
+              <th class="text-left p-3 font-semibold text-stone-700">HTTP/1.1</th>
+              <th class="text-left p-3 font-semibold text-stone-700">HTTP/2</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-stone-200">
+            <tr><td class="p-3">Connections per domain</td><td class="p-3">~6</td><td class="p-3">1</td></tr>
+            <tr><td class="p-3">Request handling</td><td class="p-3">Sequential</td><td class="p-3">Multiplexed</td></tr>
+            <tr><td class="p-3">Headers</td><td class="p-3">Plain text, repeated</td><td class="p-3">Compressed (HPACK)</td></tr>
+            <tr><td class="p-3">Protocol format</td><td class="p-3">Text</td><td class="p-3">Binary</td></tr>
+            <tr><td class="p-3">Prioritization</td><td class="p-3">None</td><td class="p-3">Stream weights</td></tr>
+            <tr><td class="p-3">Server push</td><td class="p-3">No</td><td class="p-3">Yes</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-lg font-semibold text-stone-900 pt-2">The Catch</h2>
+      <p>HTTP/2 still runs over TCP, which means TCP-level head-of-line blocking is still a thing. If a single packet is lost, all streams on that connection stall until it's retransmitted. This is exactly what HTTP/3 (built on QUIC/UDP) solves — but that's a topic for another post.</p>
+
+      <h2 class="text-lg font-semibold text-stone-900 pt-2">Bottom Line</h2>
+      <p>HTTP/2 made the web significantly faster by fixing the protocol-level inefficiencies of HTTP/1.1. Most of the old performance hacks (domain sharding, concatenation, spriting) are no longer necessary. If your server supports it, there's no reason not to use HTTP/2 — it's backwards compatible and requires zero changes to your application code.</p>
+    </div>
+  </main>
