@@ -1,5 +1,4 @@
 import { resolve } from "path";
-import { readFileSync } from "fs";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vite";
 
@@ -18,7 +17,6 @@ function inlinePlugin() {
       for (const chunk of Object.values(bundle)) {
         if (chunk.fileName.endsWith(".html")) {
           let html = chunk.source;
-          // Replace CSS link tags with inline <style>
           html = html.replace(
             /<link rel="stylesheet"[^>]*href="[^"]*\/([^"]+\.css)"[^>]*>/g,
             (_, file) => {
@@ -34,14 +32,18 @@ function inlinePlugin() {
 }
 
 export default defineConfig({
+  root: "src",
+  publicDir: false,
   plugins: [tailwindcss(), inlinePlugin()],
   build: {
-    assetsInlineLimit: 100000000, // base64 inline all assets
+    outDir: resolve(__dirname, "dist"),
+    emptyOutDir: true,
+    assetsInlineLimit: 100000000,
     cssCodeSplit: false,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
-        blog: resolve(__dirname, "blog.html"),
+        main: resolve(__dirname, "src/index.html"),
+        blog: resolve(__dirname, "src/blog/index.html"),
       },
     },
   },
